@@ -1,0 +1,10 @@
+Laurabelle
+==========
+
+Node.js based, simple IRC bot, inspired by INFOBOT.
+
+Requires
+--------
+
+- node.js
+- jerk
