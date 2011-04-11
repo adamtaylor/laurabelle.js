@@ -8,3 +8,14 @@ Requires
 
 - node.js
 - jerk
+
+Configuration
+-------------
+
+Edit the configuration block in laurabelle.js
+
+Running
+-------
+
+`node laurabelle.js` or `node laurabelle.js &` to leave it running as a
+background process.
