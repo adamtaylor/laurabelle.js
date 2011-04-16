@@ -49,4 +49,22 @@ jerk( function( j ) {
         });
     })
 
+    j.watch_for( /^forget (\w+)/, function( message ) {
+        db.open("info.db", function (error) {
+            if (error) {
+                throw error;
+            }
+            db.execute(
+                "DELETE FROM factoids WHERE thing = ?",
+                [message.match_data[1]],
+                function (error, rows) {
+                    if (error) {
+                        throw error;
+                    }
+                    message.say( message.user + ': I forgot ' +  message.match_data[1] )
+                }
+            );
+        });
+    })
+
 }).connect( options )
