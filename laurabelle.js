@@ -31,7 +31,7 @@ jerk( function( j ) {
         });
     })
 
-    j.watch_for( /^(.+)?/, function( message ) {
+    j.watch_for( /^(\w+)\?/, function( message ) {
         db.open("info.db", function (error) {
             if (error) {
                 throw error;
